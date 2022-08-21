@@ -10,14 +10,11 @@ import (
 	majoo "github.com/ersa97/test-majoo"
 	md "github.com/ersa97/test-majoo/middleware"
 	"github.com/ersa97/test-majoo/models"
-	"github.com/go-chi/chi/v5/middleware"
 	"github.com/gorilla/mux"
 )
 
 func Mux(majooService majoo.MajooService) {
 	r := mux.NewRouter()
-
-	r.Use(middleware.Logger)
 	r.Use(func(h http.Handler) http.Handler {
 		return http.HandlerFunc(func(rw http.ResponseWriter, r *http.Request) {
 			rw.Header().Set("Content-Type", "application/json")
