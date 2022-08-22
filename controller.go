@@ -71,7 +71,7 @@ func (m *MajooService) GetMerchantOmzet(w http.ResponseWriter, r *http.Request) 
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		json.NewEncoder(w).Encode(models.Response{
-			Message: err.Error(),
+			Message: "required field limit",
 		})
 		return
 	}
@@ -79,7 +79,7 @@ func (m *MajooService) GetMerchantOmzet(w http.ResponseWriter, r *http.Request) 
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		json.NewEncoder(w).Encode(models.Response{
-			Message: err.Error(),
+			Message: "required field limit",
 		})
 		return
 	}
@@ -107,7 +107,7 @@ func (m *MajooService) GetMerchantOutletOmzet(w http.ResponseWriter, r *http.Req
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		json.NewEncoder(w).Encode(models.Response{
-			Message: err.Error(),
+			Message: "required field limit",
 		})
 		return
 	}
@@ -115,7 +115,7 @@ func (m *MajooService) GetMerchantOutletOmzet(w http.ResponseWriter, r *http.Req
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		json.NewEncoder(w).Encode(models.Response{
-			Message: err.Error(),
+			Message: "required field limit",
 		})
 		return
 	}
